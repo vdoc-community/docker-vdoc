@@ -1,0 +1,21 @@
+mysql:
+  image: mysql
+  environment:
+    - MYSQL_DATABASE=vdoc_base
+    - MYSQL_USER=vdoc
+    - MYSQL_PASSWORD=manager
+    - MYSQL_ROOT_PASSWORD=manager
+vdoc:
+  image: visiativ/vdoc
+  links:
+    - mysql:mysql
+  ports:
+    - "8080:8080"
+  environment:
+    - DB_USER=vdoc
+    - DB_PASS=manager
+    - DB_NAME=vdoc_base
+    - DB_TYPE=mysql
+    - DB_HOST=mysql
+    - DB_PORT=3306
+

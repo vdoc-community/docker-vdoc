@@ -1,3 +1,7 @@
+# never push the vdoc setup 
+vdoc/*.run
+
+
 *.class
 
 # Mobile Tools for Java (J2ME)
