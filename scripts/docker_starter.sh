@@ -21,7 +21,7 @@ echo module.news.active=$MODULE_NEWS >> $modulesFileName
 
 # create config.properties
 configFileName="$VDOC_HOME/config.properties"
-export  DB_PASS="$(echo $DB_PASS | base64 -)"
+
 # MYSQL 
 java -cp $VDOC_HOME/java/PropertiesUpdater.jar PropertiesUpdater $configFileName
 
